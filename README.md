@@ -1,4 +1,4 @@
-# salt-basic
+# salt-nginx
 
 Saltstack states to set up an nginx server.
 
