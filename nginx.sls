@@ -32,6 +32,19 @@ nginx_dns_resolver:
     - watch_in:
       - service: nginx_service
 
+# protect the ssl dir:
+/etc/nginx/ssl:
+  file.directory:
+    - user: root
+    - group: root
+    - mode: '0700'
+    - recurse:
+      - user
+      - group
+      - mode
+    - require:
+      - pkg: nginx
+
 # generate DH primes
 # https://weakdh.org/sysadmin.html
 nginx_dh_primes:
@@ -40,6 +53,8 @@ nginx_dh_primes:
     - unless: test -f /etc/nginx/ssl/dhparams.pem
     - watch_in:
       - service: nginx_service
+    - require:
+      - file: /etc/nginx/ssl
 
 # do not restart if config has errors
 nginx_test_config:
