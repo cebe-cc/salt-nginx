@@ -8,7 +8,7 @@ Add these to your saltstack states:
 
     git submodule add https://github.com/cebe-cc/salt-nginx.git salt/nginx
     
-The states are independent of their actual location in the state file tree, so you may replace `salt/nginx` with a location of your choice.
+> **Note:** The states are currently not independent of their location in the state file tree, so you must place them at `salt://nginx`.
 
 ## Supported OSs
 
