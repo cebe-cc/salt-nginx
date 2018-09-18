@@ -23,3 +23,4 @@ The states are independent of their actual location in the state file tree, so y
   - setup DH primes according to https://weakdh.org/sysadmin.html
   - configure OCSP stapling
   - set HSTS header
+  - Automatic registration of Letsencrypt certificates via acme.sh
