@@ -17,8 +17,8 @@
 # If no domain is defined in pillar a certificate is issued for the
 # servers hostname (grains.id)
 #
-# You may use the state "acme_cert_{{ ssl_domain }}" in other states requisites,
-# where {{ ssl_domain }} refers to the first domain specified in "domains" or the 
+# You may use the state "acme_cert_{ssl_domain}" in other states requisites,
+# where {ssl_domain} refers to the first domain specified in "domains" or the 
 # hostname if no pillar is specified.
 #
 
