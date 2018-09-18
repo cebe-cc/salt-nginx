@@ -18,4 +18,8 @@ The states are independent of their actual location in the state file tree, so y
 
 ## Features
 
-- TBD
+- Basic Nginx Setup
+- SSL
+  - setup DH primes according to https://weakdh.org/sysadmin.html
+  - configure OCSP stapling
+  - set HSTS header
