@@ -14,8 +14,7 @@
 
 # The webdir option is optional, defaults to /var/www/html
 #
-# If no domain is defined in pillar a certificate is issued for the
-# servers hostname (grains.id)
+# If no configuration is defined in pillar, no certificate is issued.
 #
 # You may use the state "acme_cert_{ssl_domain}" in other states requisites,
 # where {ssl_domain} refers to the first domain specified in "domains" or the 
