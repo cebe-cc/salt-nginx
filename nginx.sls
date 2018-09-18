@@ -5,6 +5,8 @@ nginx:
       - nginx
       # things like htpasswd
       - apache2-utils
+      # required for proper SSL support
+      - ca-certificates
 
 /etc/nginx:
   file.recurse:
