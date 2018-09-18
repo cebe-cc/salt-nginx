@@ -16,4 +16,4 @@ ssl_session_cache shared:SSL:10m;
 # https://www.digitalocean.com/community/tutorials/how-to-configure-ocsp-stapling-on-apache-and-nginx
 ssl_stapling on;
 ssl_stapling_verify on;
-ssl_trusted_certificate /etc/ssl/private/ca-certs.pem;
+ssl_trusted_certificate /etc/ssl/certs/ca-certificates.crt;
