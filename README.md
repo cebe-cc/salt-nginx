@@ -15,6 +15,7 @@ Add these to your saltstack states:
 - Debian
   - 8, `jessie`
   - 9, `stretch`
+  - 10, `buster`
 
 ## Features
 
