@@ -41,7 +41,7 @@ acme_cert_{{ ssl_domain }}:
     - unless: test -f /var/lib/acme/{{ ssl_domain }}/{{ ssl_domain }}.cer
     - require:
         - cmd: acme_install
-        - pkg: curl
+        - pkg: acme_dependencies
 
 {% endfor %}
 {% endif %}

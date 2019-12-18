@@ -1,8 +1,8 @@
-curl:
-  pkg.installed
-
-git:
-  pkg.installed
+acme_dependencies:
+  pkg.installed:
+   - pkgs:
+      - curl
+      - git
 
 acme_git:
   git.latest:
@@ -10,7 +10,7 @@ acme_git:
     - rev: 2.7.9
     - target: /opt/acme.sh
     - require:
-        - pkg: git
+        - pkg: acme_dependencies
 
 acme_install:
   cmd.run:
