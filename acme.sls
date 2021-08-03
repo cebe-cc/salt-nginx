@@ -9,6 +9,7 @@ acme_git:
     - name: https://github.com/Neilpang/acme.sh.git
     - rev: 2.8.5 # TODO install a process to upgrade this on a regular basis
     - target: /opt/acme.sh
+    - force_reset: True
     - require:
         - pkg: acme_dependencies
 
