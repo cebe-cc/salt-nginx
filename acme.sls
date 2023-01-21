@@ -23,7 +23,7 @@ acme_install:
 acme_cert_cron:
   cron.present:
     - identifier: acme_cert_cron
-    - name: '/var/lib/acme/acme.sh --cron --home "/var/lib/acme" --reloadcmd "systemctl reload nginx" > /var/log/acme.log'
+    - name: '/var/lib/acme/acme.sh --cron --home "/var/lib/acme" --reloadcmd "systemctl reload nginx" >> /var/log/acme.log 2>&1'
     - minute: random
     - hour: 3
     - require:
